@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#main {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #F2F8ED;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#head {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+#head h1 {
+    font-size: clamp(24px, 5vw, 48px);
+    font-weight: 700;
+    color: #48A300;
+}
+
+#head h1 span {
+    color: #61481C;
+}
+
+#container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #FBFBFB;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#part-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#part-1 h3 {
+    font-size: clamp(18px, 4vw, 24px);
+}
+
+#part-1 img {
+    width: 30px;
+    height: auto;
+}
+
+p {
+    color: #858585;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#progress-bar {
+    width: 100%;
+    background-color: #E8F2E1;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#progress {
+    width: 0;
+    height: 30px;
+    background-color: #48A300;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: width 0.3s ease;
+}
+
+#error {
+    color: #FFA07A;
+    margin-bottom: 20px;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    padding-left: 50px; /* Leave space for the circle */
+    border: 1px solid #E5E5E5;
+    font-size: 16px;
+    position: relative;
+}
+
+
+.circle {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #CFC8BA;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 1; 
+}
+
+.circle>i{
+    font-weight: 900;
+    color: #fff;
+}
+
+.circle.active {
+    background-color: #48A300;
+}
+
+#last-part {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#last-part h3 {
+    font-weight: 550;
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+@media screen and (max-width: 480px) {
+    .circle {
+        height: 20px;
+        width: 20px;
+    }
+
+    input {
+        padding-left: 45px; /* Adjust padding for smaller circles */
+    }
+}
+
+
+
+
